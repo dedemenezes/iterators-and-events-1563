@@ -17,7 +17,7 @@ console.log(unorderedList)
 // <ul><li></li><li></li><li></li></ul>
 
 const container = document.querySelector('.container')
-// console.log(container)
+console.log(container)
 container.insertAdjacentHTML('beforeend', unorderedList)
 
 const listItems = document.querySelectorAll('#hogwarts li')
@@ -32,7 +32,9 @@ const ul = document.querySelector('ul#hogwarts')
 ul.style.listStyleType = "upper-roman";
 
 const messi = document.querySelector('#messi')
+console.log(messi.dataset) // Return an object with all HTML attributes prefixed by DATA. EX: data-team, data-world-best
 console.log(messi.dataset.team)
+console.log(messi.dataset.worldBest)
 
 
 const members = document.querySelectorAll('.abba')
@@ -47,13 +49,16 @@ members.forEach((member) => {
 //   // Do something (callback)
 // });
 
-const img = document.getElementById('romain')
-console.log(img)
-img.addEventListener('click', (event) => {
-  console.log(event);
-  console.log(event.currentTarget); // returns the element whom FIRED the event
-  event.currentTarget.classList.toggle('img-circle')
-});
+// // CODE BELOW IS COMMENTED OUT
+// // BECAUSE WE ARE DOING IT AGAIN
+// // WHEN ITERATING BELOW!!!
+// const img = document.getElementById('romain')
+// console.log(img)
+// img.addEventListener('click', (event) => {
+//   console.log(event);
+//   console.log(event.currentTarget); // returns the element whom FIRED the event
+//   event.currentTarget.classList.toggle('img-circle')
+// });
 
 // 1. select the RIGHT element(s)
 const images = document.querySelectorAll('img')
@@ -79,7 +84,7 @@ const checkboxes = document.querySelectorAll('.form-check-input')
 
 // 2. Bind the event listener
 btn.addEventListener('click', (event) => {
-  // console.log(event)
+  console.log(event)
   // 3. iterate over the checkboxes
   checkboxes.forEach((checkbox) => {
     console.log(checkbox.checked)
